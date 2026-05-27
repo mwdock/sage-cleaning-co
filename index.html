@@ -241,10 +241,10 @@
     /* Hero gradient overlay */
     .hero-overlay {
       background: linear-gradient(
-        135deg,
-        rgba(44, 24, 16, 0.65) 0%,
-        rgba(44, 24, 16, 0.35) 50%,
-        rgba(44, 24, 16, 0.20) 100%
+        90deg,
+        rgba(44, 24, 16, 0.75) 0%,
+        rgba(44, 24, 16, 0.40) 50%,
+        rgba(44, 24, 16, 0.10) 100%
       );
     }
 
@@ -363,7 +363,7 @@
   </a>
 
   <!-- ===== NAVIGATION ===== -->
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="site-header">
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20" id="site-header" style="box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 24px rgba(0,0,0,0.06);">
     <nav class="max-w-content mx-auto px-6 lg:px-8" aria-label="Main navigation">
       <div class="flex items-center justify-between h-16 lg:h-20">
         <!-- Logo -->
@@ -434,7 +434,7 @@
     <!-- Background -->
     <div class="absolute inset-0">
       <img 
-        src="zoe-hero-cleaning.png" 
+        src="zoe-headshot.png" 
         alt="Zoe cleaning a kitchen with a warm smile" 
         class="w-full h-full object-cover object-[center_30%]"
         loading="eager"
@@ -1131,24 +1131,6 @@
 
   <!-- ===== JAVASCRIPT ===== -->
   <script>
-    // --- Navbar scroll effect ---
-    const header = document.getElementById('site-header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.scrollY;
-      if (currentScroll > 60) {
-        header.classList.add('bg-white/70', 'backdrop-blur-xl', 'shadow-lg', 'border-b', 'border-white/20');
-        header.style.boxShadow = 'inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 24px rgba(0,0,0,0.06)';
-        header.classList.remove('bg-transparent');
-      } else {
-        header.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
-        header.classList.add('bg-transparent');
-        header.style.boxShadow = 'none';
-      }
-      lastScroll = currentScroll;
-    });
-
     // --- Mobile menu ---
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
